@@ -1,192 +1,480 @@
+/* =====================================================
+   ROBSON BORGES DE LIMA - ACADEMIC WEBSITE
+   Main stylesheet
+===================================================== */
+
+/* ---------- RESET ---------- */
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+  background: #f7faf8;
   color: #1f2933;
-  background: #f8faf9;
   line-height: 1.7;
 }
 
-.header {
-  position: fixed;
-  width: 100%;
-  top: 0;
-  background: rgba(4, 47, 46, 0.95);
-  z-index: 1000;
+/* ---------- VARIABLES ---------- */
+
+:root {
+  --green-dark: #042f2e;
+  --green-main: #065f46;
+  --green-light: #10b981;
+  --green-soft: #ecfdf5;
+  --blue-dark: #0f172a;
+  --gray: #64748b;
+  --white: #ffffff;
+  --shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
 }
 
-.navbar {
-  max-width: 1200px;
-  margin: auto;
-  padding: 18px 30px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
+/* ---------- GLOBAL ---------- */
 
-.logo {
-  color: white;
-  font-weight: bold;
-  font-size: 1.1rem;
-}
-
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 25px;
-}
-
-.nav-links a {
-  color: white;
+a {
+  color: inherit;
   text-decoration: none;
-  font-size: 0.95rem;
 }
 
-.nav-links a:hover {
-  color: #a7f3d0;
-}
-
-.hero {
-  min-height: 100vh;
-  background: linear-gradient(rgba(3, 35, 34, 0.78), rgba(3, 35, 34, 0.78)),
-              url("../img/amazon-forest.jpg");
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  align-items: center;
-  padding: 120px 30px 60px;
-}
-
-.hero-content {
-  max-width: 900px;
-  margin: auto;
-  text-align: center;
-  color: white;
-}
-
-.subtitle {
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  color: #a7f3d0;
-  margin-bottom: 20px;
-}
-
-.hero h1 {
-  font-size: 3.8rem;
-  margin-bottom: 25px;
-}
-
-.hero-text {
-  font-size: 1.25rem;
-  max-width: 850px;
-  margin: auto;
-}
-
-.hero-buttons {
-  margin-top: 35px;
-}
-
-.btn {
-  display: inline-block;
-  padding: 12px 26px;
-  margin: 8px;
-  border-radius: 30px;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.primary {
-  background: #10b981;
-  color: white;
-}
-
-.secondary {
-  border: 2px solid white;
-  color: white;
+.container {
+  width: min(1120px, 90%);
+  margin: 0 auto;
 }
 
 .section {
-  max-width: 1100px;
-  margin: auto;
-  padding: 90px 30px;
+  padding: 95px 0;
 }
 
-.section h2 {
-  font-size: 2.4rem;
-  color: #064e3b;
-  margin-bottom: 25px;
+.section-label {
+  display: inline-block;
+  margin-bottom: 16px;
+  color: var(--green-light);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.78rem;
 }
 
-.dark {
-  max-width: none;
-  background: #ecfdf5;
+h1,
+h2,
+h3 {
+  line-height: 1.2;
+  color: var(--green-dark);
 }
 
-.dark > h2,
-.dark > p,
-.dark > .cards {
-  max-width: 1100px;
-  margin-left: auto;
-  margin-right: auto;
+h2 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  margin-bottom: 24px;
 }
 
-.cards {
+p {
+  color: #334155;
+  font-size: 1.05rem;
+}
+
+.two-columns {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 25px;
-  margin-top: 35px;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 60px;
+  align-items: start;
 }
 
-.card {
-  background: white;
+/* ---------- HEADER ---------- */
+
+.site-header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  background: rgba(4, 47, 46, 0.92);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.navbar {
+  width: min(1180px, 92%);
+  margin: 0 auto;
+  height: 78px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  color: var(--white);
+  font-weight: 800;
+  font-size: 1rem;
+  letter-spacing: 0.4px;
+}
+
+.nav-menu {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.nav-menu a {
+  color: #e5f7ef;
+  font-size: 0.95rem;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.nav-menu a:hover {
+  color: var(--green-light);
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--white);
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+/* ---------- HERO ---------- */
+
+.hero {
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 130px 24px 80px;
+  background:
+    linear-gradient(rgba(2, 32, 31, 0.82), rgba(2, 32, 31, 0.82)),
+    url("../img/amazon-forest.jpg");
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+}
+
+.hero-content {
+  max-width: 980px;
+  color: var(--white);
+  position: relative;
+  z-index: 2;
+}
+
+.eyebrow {
+  color: #a7f3d0;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-weight: 700;
+  font-size: 0.85rem;
+  margin-bottom: 24px;
+}
+
+.hero h1 {
+  color: var(--white);
+  font-size: clamp(3rem, 7vw, 5.8rem);
+  margin-bottom: 28px;
+}
+
+.hero-description {
+  color: #e2e8f0;
+  font-size: clamp(1.05rem, 2vw, 1.3rem);
+  max-width: 870px;
+  margin: 0 auto;
+}
+
+.hero-actions {
+  margin-top: 38px;
+}
+
+/* ---------- BUTTONS ---------- */
+
+.btn {
+  display: inline-block;
+  padding: 14px 30px;
+  margin: 8px;
+  border-radius: 999px;
+  font-weight: 800;
+  transition: 0.3s ease;
+}
+
+.btn-primary {
+  background: var(--green-light);
+  color: var(--white);
+  box-shadow: 0 12px 30px rgba(16, 185, 129, 0.35);
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px);
+  background: #059669;
+}
+
+.btn-outline {
+  border: 2px solid rgba(255, 255, 255, 0.8);
+  color: var(--white);
+}
+
+.btn-outline:hover {
+  background: var(--white);
+  color: var(--green-dark);
+}
+
+/* ---------- ABOUT ---------- */
+
+.about-section {
+  background: var(--white);
+}
+
+.about-section p + p {
+  margin-top: 18px;
+}
+
+/* ---------- RESEARCH ---------- */
+
+.research-section {
+  background: var(--green-soft);
+}
+
+.card-grid {
+  margin-top: 38px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 26px;
+}
+
+.research-card {
+  background: var(--white);
+  padding: 34px;
+  border-radius: 22px;
+  box-shadow: var(--shadow);
+  border-top: 5px solid var(--green-light);
+  transition: 0.3s ease;
+}
+
+.research-card:hover {
+  transform: translateY(-8px);
+}
+
+.research-card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 14px;
+}
+
+/* ---------- PROJECTS ---------- */
+
+.projects-section {
+  background: var(--white);
+}
+
+.project-list {
+  display: grid;
+  gap: 24px;
+  margin-top: 34px;
+}
+
+.project-item {
+  background: #f8fafc;
+  border-left: 6px solid var(--green-main);
   padding: 30px;
   border-radius: 18px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 10px 28px rgba(15, 23, 42, 0.07);
 }
 
-.card h3 {
-  color: #065f46;
-  margin-bottom: 15px;
+.project-item h3 {
+  margin-bottom: 12px;
 }
 
-.contact .links {
-  margin-top: 25px;
+/* ---------- TEACHING ---------- */
+
+.teaching-section {
+  background: var(--green-dark);
 }
 
-.contact .links a {
-  margin-right: 18px;
-  color: #047857;
-  font-weight: bold;
-  text-decoration: none;
+.teaching-section h2,
+.teaching-section .section-label {
+  color: var(--white);
 }
 
-footer {
-  background: #042f2e;
-  color: white;
+.teaching-list {
+  list-style: none;
+  display: grid;
+  gap: 14px;
+}
+
+.teaching-list li {
+  background: rgba(255, 255, 255, 0.08);
+  color: #ecfdf5;
+  padding: 16px 20px;
+  border-radius: 12px;
+  border-left: 4px solid var(--green-light);
+}
+
+/* ---------- PUBLICATIONS ---------- */
+
+.publications-section {
+  background: var(--white);
+}
+
+.section-intro {
+  max-width: 850px;
+}
+
+.publication-highlight {
+  margin-top: 32px;
+  background: var(--green-soft);
+  padding: 32px;
+  border-radius: 20px;
+  border-left: 6px solid var(--green-light);
+}
+
+.publication-highlight h3 {
+  margin-bottom: 12px;
+}
+
+/* ---------- STATS ---------- */
+
+.stats-section {
+  background: linear-gradient(135deg, var(--green-dark), var(--blue-dark));
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
+}
+
+.stat-box {
   text-align: center;
-  padding: 25px;
+  padding: 34px 22px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.08);
 }
 
-@media (max-width: 850px) {
-  .navbar {
+.stat-box span {
+  display: block;
+  color: var(--green-light);
+  font-size: 2rem;
+  font-weight: 900;
+  margin-bottom: 8px;
+}
+
+.stat-box p {
+  color: #e2e8f0;
+}
+
+/* ---------- CONTACT ---------- */
+
+.contact-section {
+  background: var(--green-soft);
+}
+
+.contact-section a {
+  color: var(--green-main);
+  font-weight: 800;
+}
+
+.social-links {
+  margin-top: 28px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.social-links a {
+  background: var(--green-main);
+  color: var(--white);
+  padding: 10px 18px;
+  border-radius: 999px;
+  font-size: 0.95rem;
+  transition: 0.3s ease;
+}
+
+.social-links a:hover {
+  background: var(--green-light);
+  transform: translateY(-3px);
+}
+
+/* ---------- FOOTER ---------- */
+
+.site-footer {
+  background: #021f1e;
+  color: var(--white);
+  text-align: center;
+  padding: 34px 20px;
+}
+
+.site-footer p {
+  color: #cbd5e1;
+  font-size: 0.95rem;
+}
+
+/* ---------- RESPONSIVE ---------- */
+
+@media (max-width: 920px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-menu {
+    position: absolute;
+    top: 78px;
+    right: 0;
+    width: 100%;
+    background: var(--green-dark);
     flex-direction: column;
-    gap: 15px;
+    gap: 0;
+    display: none;
   }
 
-  .nav-links {
-    flex-wrap: wrap;
-    justify-content: center;
+  .nav-menu.active {
+    display: flex;
   }
 
-  .hero h1 {
-    font-size: 2.5rem;
+  .nav-menu li {
+    width: 100%;
+    text-align: center;
   }
 
-  .cards {
+  .nav-menu a {
+    display: block;
+    padding: 18px;
+  }
+
+  .two-columns {
     grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 560px) {
+  .navbar {
+    height: 70px;
+  }
+
+  .hero {
+    padding-top: 110px;
+  }
+
+  .section {
+    padding: 70px 0;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .logo {
+    font-size: 0.9rem;
   }
 }
