@@ -3,17 +3,21 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <title>Robson Borges de Lima | Forest Scientist</title>
+
+  <meta name="description" content="Academic website and scientific portfolio of Robson Borges de Lima, focused on Forest Science, Amazon Ecology, LiDAR, Forest Mensuration, Species Distribution Modeling, and Machine Learning." />
 
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 
 <body>
-  <header class="header">
-    <nav class="navbar">
-      <div class="logo">Robson Borges de Lima</div>
 
-      <ul class="nav-links">
+  <header class="site-header">
+    <nav class="navbar">
+      <a href="#" class="logo">Robson Borges de Lima</a>
+
+      <ul class="nav-menu">
         <li><a href="#about">About</a></li>
         <li><a href="#research">Research</a></li>
         <li><a href="#projects">Projects</a></li>
@@ -21,105 +25,234 @@
         <li><a href="#publications">Publications</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
+
+      <button class="menu-toggle" aria-label="Open menu">☰</button>
     </nav>
   </header>
 
   <section class="hero">
+    <div class="hero-overlay"></div>
+
     <div class="hero-content">
-      <p class="subtitle">Forest Scientist | Amazon Ecology | LiDAR | SDM</p>
+      <p class="eyebrow">Forest Scientist • Amazon Ecology • LiDAR • SDM</p>
+
       <h1>Robson Borges de Lima</h1>
-      <p class="hero-text">
-        Assistant Professor at the State University of Amapá, Brazil.
-        Research focused on forest mensuration, tropical forest ecology,
-        Amazonian giant trees, LiDAR remote sensing, species distribution
-        modeling, and machine learning for forest sciences.
+
+      <p class="hero-description">
+        Assistant Professor at the State University of Amapá, Brazil. My work integrates
+        forest mensuration, tropical forest ecology, Amazonian giant trees, LiDAR remote sensing,
+        species distribution modeling, and machine learning applied to forest sciences.
       </p>
 
-      <div class="hero-buttons">
-        <a href="#research" class="btn primary">Explore Research</a>
-        <a href="#contact" class="btn secondary">Contact</a>
+      <div class="hero-actions">
+        <a href="#research" class="btn btn-primary">Explore Research</a>
+        <a href="#contact" class="btn btn-outline">Contact</a>
       </div>
     </div>
   </section>
 
   <main>
-    <section id="about" class="section">
-      <h2>About</h2>
-      <p>
-        I am a forest scientist working at the interface between forest
-        mensuration, Amazonian forest ecology, remote sensing, biodiversity
-        modeling, and quantitative methods applied to tropical forests.
-      </p>
-    </section>
 
-    <section id="research" class="section dark">
-      <h2>Research Areas</h2>
-
-      <div class="cards">
-        <div class="card">
-          <h3>Amazonian Giant Trees</h3>
-          <p>Ecology, distribution, monitoring, and conservation of giant trees in Amazonian forests.</p>
+    <section id="about" class="section about-section">
+      <div class="container two-columns">
+        <div>
+          <span class="section-label">About</span>
+          <h2>Forest science, Amazonian ecology, and quantitative methods</h2>
         </div>
 
-        <div class="card">
-          <h3>LiDAR Remote Sensing</h3>
-          <p>Mapping forest structure, canopy height, biomass, and landscape-scale patterns using airborne LiDAR.</p>
-        </div>
+        <div>
+          <p>
+            I am a forest scientist and professor working at the interface between forest
+            mensuration, forest biometrics, tropical forest ecology, remote sensing, spatial
+            modeling, and biodiversity conservation.
+          </p>
 
-        <div class="card">
-          <h3>Species Distribution Modeling</h3>
-          <p>Modeling current and future species distributions under climate and environmental change.</p>
-        </div>
-
-        <div class="card">
-          <h3>Forest Mensuration</h3>
-          <p>Forest biometrics, growth, yield, structure, volume, biomass, and forest management.</p>
+          <p>
+            My research focuses on understanding forest structure, tree diversity, biomass,
+            giant trees, and species distributions across tropical landscapes, with emphasis
+            on the Amazon.
+          </p>
         </div>
       </div>
     </section>
 
-    <section id="projects" class="section">
-      <h2>Featured Projects</h2>
-      <p>
-        Current projects include integrated monitoring of Amazonian giant trees,
-        LiDAR-based forest mapping, species distribution modeling, forest
-        diversity mapping, and long-term ecological research in the eastern Amazon.
-      </p>
-    </section>
+    <section id="research" class="section research-section">
+      <div class="container">
+        <span class="section-label">Research</span>
+        <h2>Main research areas</h2>
 
-    <section id="teaching" class="section dark">
-      <h2>Teaching</h2>
-      <p>
-        Teaching activities include Forest Mensuration, Forest Biometrics,
-        Tropical Forest Management, Experimental Statistics, Species Distribution
-        Modeling in R, and Multivariate Analysis in Ecology.
-      </p>
-    </section>
+        <div class="card-grid">
+          <article class="research-card">
+            <h3>Amazonian Giant Trees</h3>
+            <p>
+              Ecology, distribution, monitoring, and conservation of giant trees in Amazonian forests.
+            </p>
+          </article>
 
-    <section id="publications" class="section">
-      <h2>Publications</h2>
-      <p>
-        Scientific publications focus on forest ecology, forest mensuration,
-        LiDAR, Amazonian giant trees, biodiversity mapping, and climate change.
-      </p>
-    </section>
+          <article class="research-card">
+            <h3>LiDAR Remote Sensing</h3>
+            <p>
+              Mapping canopy height, forest structure, biomass, and spatial patterns using airborne LiDAR.
+            </p>
+          </article>
 
-    <section id="contact" class="section contact">
-      <h2>Contact</h2>
-      <p>State University of Amapá, Brazil</p>
-      <p>Email: your-email@ueap.edu.br</p>
+          <article class="research-card">
+            <h3>Species Distribution Modeling</h3>
+            <p>
+              Modeling current and future species distributions under environmental and climate change.
+            </p>
+          </article>
 
-      <div class="links">
-        <a href="#">Lattes</a>
-        <a href="#">ORCID</a>
-        <a href="#">Google Scholar</a>
-        <a href="#">GitHub</a>
+          <article class="research-card">
+            <h3>Forest Mensuration</h3>
+            <p>
+              Forest biometrics, volume, biomass, growth, yield, structure, and forest management.
+            </p>
+          </article>
+
+          <article class="research-card">
+            <h3>Machine Learning</h3>
+            <p>
+              Predictive modeling using Random Forest, BRT, Maxent, GLM, GAM, and ensemble approaches.
+            </p>
+          </article>
+
+          <article class="research-card">
+            <h3>Climate Change and Conservation</h3>
+            <p>
+              Assessing forest vulnerability, biodiversity patterns, and conservation priorities.
+            </p>
+          </article>
+        </div>
       </div>
     </section>
+
+    <section id="projects" class="section projects-section">
+      <div class="container">
+        <span class="section-label">Projects</span>
+        <h2>Featured projects</h2>
+
+        <div class="project-list">
+          <article class="project-item">
+            <h3>Integrated Monitoring of Amazonian Giant Trees</h3>
+            <p>
+              Long-term ecological research focused on giant trees, forest dynamics,
+              LiDAR, biomass, soils, microclimate, and biodiversity in eastern Amazonia.
+            </p>
+          </article>
+
+          <article class="project-item">
+            <h3>LiDAR-based Mapping of Giant Trees in the Amazon</h3>
+            <p>
+              Mapping and modeling the density, distribution, and environmental drivers
+              of exceptionally tall trees across Amazonian landscapes.
+            </p>
+          </article>
+
+          <article class="project-item">
+            <h3>Species Distribution Modeling in R</h3>
+            <p>
+              Development of scientific and educational resources on SDM using real data,
+              ecological theory, spatial predictors, and multiple modeling algorithms.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="teaching" class="section teaching-section">
+      <div class="container two-columns">
+        <div>
+          <span class="section-label">Teaching</span>
+          <h2>Courses and educational resources</h2>
+        </div>
+
+        <div>
+          <ul class="teaching-list">
+            <li>Forest Mensuration</li>
+            <li>Forest Biometrics</li>
+            <li>Tropical Forest Management</li>
+            <li>Experimental Statistics</li>
+            <li>Species Distribution Modeling in R</li>
+            <li>Multivariate Analysis in Ecology</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="publications" class="section publications-section">
+      <div class="container">
+        <span class="section-label">Publications</span>
+        <h2>Scientific production</h2>
+
+        <p class="section-intro">
+          My publications address forest ecology, forest mensuration, Amazonian giant trees,
+          LiDAR remote sensing, species distribution modeling, biodiversity mapping, and
+          climate change impacts on tropical forests.
+        </p>
+
+        <div class="publication-highlight">
+          <h3>Giants of the Amazon</h3>
+          <p>
+            Research on how environmental variation drives the diversity patterns of large trees
+            in Amazonian forests.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section stats-section">
+      <div class="container stats-grid">
+        <div class="stat-box">
+          <span>Amazon</span>
+          <p>Main research region</p>
+        </div>
+
+        <div class="stat-box">
+          <span>LiDAR</span>
+          <p>Remote sensing for forest structure</p>
+        </div>
+
+        <div class="stat-box">
+          <span>SDM</span>
+          <p>Species distribution modeling</p>
+        </div>
+
+        <div class="stat-box">
+          <span>R</span>
+          <p>Open science and reproducible workflows</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section contact-section">
+      <div class="container">
+        <span class="section-label">Contact</span>
+        <h2>Get in touch</h2>
+
+        <p>
+          State University of Amapá, Brazil
+        </p>
+
+        <p>
+          Email: <a href="mailto:your-email@ueap.edu.br">your-email@ueap.edu.br</a>
+        </p>
+
+        <div class="social-links">
+          <a href="#">Lattes</a>
+          <a href="#">ORCID</a>
+          <a href="#">Google Scholar</a>
+          <a href="#">GitHub</a>
+          <a href="#">ResearchGate</a>
+        </div>
+      </div>
+    </section>
+
   </main>
 
-  <footer>
+  <footer class="site-footer">
     <p>© 2026 Robson Borges de Lima. All rights reserved.</p>
+    <p>Forest Science • Amazon Ecology • LiDAR • Species Distribution Modeling</p>
   </footer>
 
   <script src="assets/js/script.js"></script>
