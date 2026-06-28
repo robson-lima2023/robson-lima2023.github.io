@@ -520,3 +520,156 @@ p {
     font-size: 0.9rem;
   }
 }
+/* ---------- SOBRE - REFINAMENTO VISUAL ---------- */
+
+.page-hero {
+  padding-top: 140px;
+  padding-bottom: 80px;
+  background: #f8faf9;
+}
+
+.page-hero.two-columns,
+.page-hero .two-columns {
+  grid-template-columns: 1.1fr 0.9fr;
+  align-items: center;
+}
+
+.page-hero h1 {
+  font-size: clamp(2.4rem, 5vw, 3.8rem);
+  margin-bottom: 18px;
+}
+
+.page-hero p {
+  max-width: 720px;
+}
+
+.profile-card {
+  max-width: 420px;
+  margin-left: auto;
+  padding: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.profile-card img {
+  width: 100%;
+  max-height: 420px;
+  object-fit: cover;
+  border-radius: 18px;
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.18);
+}
+
+.profile-card h3,
+.profile-card p {
+  display: none;
+}
+
+/* ---------- LINKS ACADÊMICOS COM ÍCONES ---------- */
+
+.academic-links-section {
+  background: #ffffff;
+  padding: 70px 0;
+}
+
+.academic-links-grid {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 18px;
+}
+
+.academic-link-card {
+  background: #f8faf9;
+  border: 1px solid #e5e7eb;
+  border-radius: 18px;
+  padding: 20px 14px;
+  text-align: center;
+  transition: 0.25s ease;
+}
+
+.academic-link-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.10);
+}
+
+.academic-icon {
+  width: 46px;
+  height: 46px;
+  margin: 0 auto 10px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-weight: 900;
+  font-size: 0.95rem;
+}
+
+.lattes-icon { background: #1e3a8a; }
+.orcid-icon { background: #a6ce39; }
+.scholar-icon { background: #4285f4; }
+.github-icon { background: #111827; }
+.rg-icon { background: #00ccbb; }
+
+.academic-link-card strong {
+  display: block;
+  color: #042f2e;
+  font-size: 0.95rem;
+}
+
+.academic-link-card small {
+  display: block;
+  margin-top: 4px;
+  color: #64748b;
+  font-size: 0.75rem;
+}
+
+/* ---------- AJUSTE HOME HERO ---------- */
+
+.hero {
+  text-align: left;
+  justify-content: flex-start;
+}
+
+.hero-content {
+  max-width: 850px;
+  margin-left: 8%;
+  text-align: left;
+}
+
+.hero h1 {
+  font-size: clamp(2.8rem, 6vw, 4.8rem);
+}
+
+.hero-description {
+  margin-left: 0;
+  max-width: 760px;
+}
+
+/* ---------- RESPONSIVO ---------- */
+
+@media (max-width: 920px) {
+  .page-hero .two-columns {
+    grid-template-columns: 1fr;
+  }
+
+  .profile-card {
+    margin: 30px auto 0;
+  }
+
+  .academic-links-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .hero-content {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+}
+
+@media (max-width: 560px) {
+  .academic-links-grid {
+    grid-template-columns: 1fr;
+  }
+}
