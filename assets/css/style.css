@@ -519,6 +519,187 @@ h3 {
   background: var(--white);
 }
 
+.page-intro {
+  padding: 138px 0 74px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(247, 250, 248, 0.98)),
+    url("../img/hero/hero-amazon.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+.page-intro-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(300px, 0.75fr);
+  gap: 74px;
+  align-items: center;
+}
+
+.page-intro h1 {
+  max-width: 820px;
+  margin-bottom: 1.1rem;
+  font-size: clamp(2.15rem, 4.2vw, 3.35rem);
+}
+
+.page-intro p:last-child {
+  max-width: 780px;
+}
+
+.page-intro-photo {
+  margin: 0;
+}
+
+.page-intro-photo img {
+  width: 100%;
+  height: min(46vw, 390px);
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: var(--shadow-soft);
+}
+
+.project-list {
+  display: grid;
+  gap: 24px;
+}
+
+.project-feature {
+  padding: 32px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--white);
+  box-shadow: var(--shadow-soft);
+}
+
+.project-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 18px;
+}
+
+.project-meta span,
+.project-card span,
+.publication-item span {
+  display: inline-flex;
+  width: fit-content;
+  align-items: center;
+  min-height: 28px;
+  padding: 4px 9px;
+  border-radius: 999px;
+  color: var(--green-800);
+  background: var(--green-100);
+  font-size: 0.73rem;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+}
+
+.project-feature h3 {
+  max-width: 980px;
+  margin-bottom: 1rem;
+  font-size: clamp(1.35rem, 2.5vw, 2rem);
+}
+
+.project-feature p {
+  max-width: 1040px;
+}
+
+.project-points {
+  display: grid;
+  gap: 8px;
+  margin: 18px 0 0;
+  padding-left: 1.1rem;
+}
+
+.project-points li {
+  color: var(--muted);
+}
+
+.project-points li::marker {
+  color: var(--green-700);
+}
+
+.project-card-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.project-card {
+  display: grid;
+  grid-template-columns: 190px minmax(0, 1fr);
+  gap: 20px;
+  overflow: hidden;
+  padding: 16px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--white);
+  box-shadow: var(--shadow-soft);
+}
+
+.project-card img {
+  width: 100%;
+  height: 100%;
+  min-height: 180px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.project-card h3 {
+  margin: 12px 0 10px;
+}
+
+.project-card p {
+  margin-bottom: 0;
+  font-size: 0.94rem;
+}
+
+.publication-list {
+  display: grid;
+  gap: 14px;
+}
+
+.publication-item {
+  padding: 24px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--white);
+}
+
+.publication-item h3 {
+  margin: 12px 0 8px;
+  font-size: 1.05rem;
+}
+
+.publication-item p {
+  margin-bottom: 14px;
+  font-size: 0.9rem;
+}
+
+.publication-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.publication-actions a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 34px;
+  padding: 6px 12px;
+  border: 1px solid rgba(8, 122, 83, 0.34);
+  border-radius: 7px;
+  color: var(--green-800);
+  font-size: 0.82rem;
+  font-weight: 800;
+  transition: background 180ms ease, transform 180ms ease;
+}
+
+.publication-actions a:hover {
+  transform: translateY(-2px);
+  background: var(--green-100);
+}
+
 .about-hero-grid {
   display: grid;
   grid-template-columns: minmax(0, 1.14fr) minmax(280px, 0.74fr);
@@ -843,6 +1024,7 @@ h3 {
   .about-hero-grid,
   .home-profile-grid,
   .field-grid,
+  .page-intro-grid,
   .collaboration-box {
     grid-template-columns: 1fr;
     gap: 34px;
@@ -864,8 +1046,17 @@ h3 {
   .quick-grid,
   .research-grid,
   .about-panel-grid,
+  .project-card-grid,
   .academic-mini-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .project-card {
+    grid-template-columns: 1fr;
+  }
+
+  .project-card img {
+    height: 220px;
   }
 
   .academic-links-box {
@@ -902,6 +1093,10 @@ h3 {
     padding: 118px 0 58px;
   }
 
+  .page-intro {
+    padding: 112px 0 58px;
+  }
+
   .hero-home {
     min-height: 78vh;
     padding-bottom: 64px;
@@ -919,9 +1114,15 @@ h3 {
   .quick-grid,
   .research-grid,
   .about-panel-grid,
+  .project-card-grid,
   .academic-mini-grid,
   .academic-links-box {
     grid-template-columns: 1fr;
+  }
+
+  .project-feature,
+  .publication-item {
+    padding: 22px;
   }
 
   .field-grid {
