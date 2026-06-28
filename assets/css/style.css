@@ -1023,3 +1023,216 @@ p {
     border-bottom: 1px solid #e5e7eb;
   }
 }
+
+/* =====================================================
+   SOBRE - MODELO ACADÊMICO LIMPO
+===================================================== */
+
+.about-hero-clean {
+  padding: 145px 0 80px;
+  background: #ffffff;
+}
+
+.about-hero-grid {
+  display: grid;
+  grid-template-columns: 1.25fr 0.75fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.about-text h1 {
+  font-size: clamp(2.6rem, 5vw, 4rem);
+  margin-bottom: 14px;
+}
+
+.about-text h3 {
+  color: #047857;
+  font-size: 1.25rem;
+  margin-bottom: 14px;
+}
+
+.about-tags {
+  color: #334155;
+  margin-bottom: 28px;
+  font-size: 0.98rem;
+}
+
+.about-text p {
+  max-width: 780px;
+}
+
+.about-photo img {
+  width: 100%;
+  max-width: 420px;
+  height: auto;
+  border-radius: 16px;
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.16);
+  display: block;
+  margin-left: auto;
+}
+
+.about-panels {
+  padding: 70px 0;
+  background: #f8faf9;
+}
+
+.about-panel-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 42px;
+}
+
+.about-panel {
+  background: transparent;
+}
+
+.panel-icon {
+  width: 48px;
+  height: 48px;
+  background: #ecfdf5;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 18px;
+  font-size: 1.45rem;
+}
+
+.about-panel h2 {
+  font-size: 1.25rem;
+  margin-bottom: 24px;
+  position: relative;
+}
+
+.about-panel h2::after {
+  content: "";
+  width: 44px;
+  height: 3px;
+  background: #047857;
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+}
+
+.about-panel ul {
+  margin-top: 30px;
+  padding-left: 18px;
+}
+
+.about-panel li {
+  margin-bottom: 10px;
+  color: #334155;
+}
+
+.timeline-clean p {
+  margin-bottom: 20px;
+  padding-left: 20px;
+  border-left: 3px solid #047857;
+}
+
+/* Links acadêmicos compactos */
+
+.academic-links-clean {
+  padding: 55px 0 70px;
+  background: #ffffff;
+}
+
+.links-clean-box {
+  display: grid;
+  grid-template-columns: 1.2fr repeat(5, 1fr);
+  align-items: center;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  background: #ffffff;
+}
+
+.links-clean-title {
+  padding: 24px;
+  border-right: 1px solid #e5e7eb;
+}
+
+.links-clean-title h2 {
+  font-size: 1.35rem;
+  margin: 0;
+}
+
+.links-clean-box a {
+  min-height: 115px;
+  padding: 18px 10px;
+  text-align: center;
+  border-right: 1px solid #e5e7eb;
+  transition: 0.25s ease;
+}
+
+.links-clean-box a:last-child {
+  border-right: none;
+}
+
+.links-clean-box a:hover {
+  background: #ecfdf5;
+}
+
+.link-symbol {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 10px;
+  font-weight: 900;
+  color: #ffffff;
+  font-size: 0.95rem;
+}
+
+.link-symbol.lattes { background: #1e3a8a; }
+.link-symbol.orcid { background: #a6ce39; color: #ffffff; }
+.link-symbol.scholar { background: #4285f4; }
+.link-symbol.github { background: #111827; }
+.link-symbol.rg { background: #00ccbb; }
+
+.links-clean-box strong {
+  display: block;
+  color: #042f2e;
+  font-size: 0.9rem;
+}
+
+/* Corrige tabelas/listas antigas que ficaram sem estilo */
+
+.quick-grid article.quick-card,
+.quick-card {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 26px;
+  border: 1px solid #e5e7eb;
+  box-shadow: none;
+}
+
+/* Responsivo */
+
+@media (max-width: 920px) {
+  .about-hero-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .about-photo img {
+    margin: 0 auto;
+  }
+
+  .about-panel-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .links-clean-box {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .links-clean-title {
+    grid-column: 1 / -1;
+    border-right: none;
+    border-bottom: 1px solid #e5e7eb;
+  }
+}
