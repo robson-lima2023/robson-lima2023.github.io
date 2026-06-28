@@ -673,3 +673,178 @@ p {
     grid-template-columns: 1fr;
   }
 }
+/* ===== REFINAMENTO ESTILO ACADÊMICO LIMPO ===== */
+
+.hero {
+  min-height: 82vh;
+  background:
+    linear-gradient(rgba(4, 47, 46, 0.55), rgba(4, 47, 46, 0.55)),
+    url("../img/hero/hero-amazon.jpg");
+  background-size: cover;
+  background-position: center;
+  text-align: left;
+}
+
+.hero-content {
+  max-width: 760px;
+  margin-left: 10%;
+  text-align: left;
+}
+
+.hero h1 {
+  font-size: clamp(2.8rem, 5vw, 4.5rem);
+  max-width: 720px;
+}
+
+.hero-description {
+  max-width: 720px;
+  margin-left: 0;
+  font-size: 1.08rem;
+}
+
+.eyebrow {
+  text-align: left;
+  font-size: 0.78rem;
+}
+
+/* Página Sobre mais limpa */
+
+.page-hero {
+  background: #ffffff;
+  padding-top: 145px;
+  padding-bottom: 70px;
+}
+
+.page-hero .two-columns {
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 70px;
+  align-items: center;
+}
+
+.page-hero h1 {
+  font-size: clamp(2.4rem, 4.5vw, 3.5rem);
+  line-height: 1.1;
+}
+
+.profile-card {
+  max-width: 360px;
+  margin-left: auto;
+  background: transparent;
+  box-shadow: none;
+  padding: 0;
+}
+
+.profile-card img {
+  width: 100%;
+  height: auto;
+  max-height: none;
+  object-fit: contain;
+  border-radius: 18px;
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.16);
+}
+
+.profile-card h3,
+.profile-card p {
+  display: none;
+}
+
+/* Links acadêmicos com ícones reais */
+
+.academic-links-section {
+  background: #ffffff;
+  padding: 50px 0 70px;
+}
+
+.academic-links-box {
+  display: grid;
+  grid-template-columns: 1.2fr repeat(5, 1fr);
+  align-items: center;
+  gap: 0;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+}
+
+.academic-links-title {
+  padding: 24px 28px;
+  border-right: 1px solid #e5e7eb;
+}
+
+.academic-links-title h2 {
+  font-size: 1.4rem;
+  margin: 0;
+}
+
+.academic-link-card {
+  min-height: 120px;
+  padding: 18px 10px;
+  text-align: center;
+  border-right: 1px solid #e5e7eb;
+  transition: 0.25s ease;
+}
+
+.academic-link-card:last-child {
+  border-right: none;
+}
+
+.academic-link-card i {
+  display: block;
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #047857;
+}
+
+.academic-link-card strong {
+  display: block;
+  font-size: 0.9rem;
+  color: #042f2e;
+}
+
+.academic-link-card:hover {
+  background: #ecfdf5;
+  transform: translateY(-2px);
+}
+
+/* Ajustes gerais para aparência mais científica */
+
+.quick-card,
+.research-card,
+.project-item {
+  box-shadow: none;
+  border: 1px solid #e5e7eb;
+}
+
+.section {
+  padding: 80px 0;
+}
+
+@media (max-width: 920px) {
+  .hero-content {
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .eyebrow {
+    text-align: center;
+  }
+
+  .page-hero .two-columns {
+    grid-template-columns: 1fr;
+  }
+
+  .profile-card {
+    margin: 30px auto 0;
+  }
+
+  .academic-links-box {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .academic-links-title {
+    grid-column: 1 / -1;
+    border-right: none;
+    border-bottom: 1px solid #e5e7eb;
+  }
+}
