@@ -700,6 +700,51 @@ h3 {
   background: var(--green-100);
 }
 
+.publication-item p a {
+  color: var(--green-800);
+  font-weight: 700;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
+.blog-card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.blog-card {
+  min-height: 100%;
+  padding: 26px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--white);
+  box-shadow: var(--shadow-soft);
+}
+
+.blog-card span {
+  display: inline-flex;
+  width: fit-content;
+  min-height: 28px;
+  align-items: center;
+  padding: 4px 9px;
+  border-radius: 999px;
+  color: var(--green-800);
+  background: var(--green-100);
+  font-size: 0.73rem;
+  font-weight: 800;
+}
+
+.blog-card h3 {
+  margin: 18px 0 10px;
+}
+
+.blog-card p {
+  margin-bottom: 0;
+  font-size: 0.94rem;
+}
+
 .about-hero-grid {
   display: grid;
   grid-template-columns: minmax(0, 1.14fr) minmax(280px, 0.74fr);
@@ -1047,6 +1092,7 @@ h3 {
   .research-grid,
   .about-panel-grid,
   .project-card-grid,
+  .blog-card-grid,
   .academic-mini-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -1115,6 +1161,7 @@ h3 {
   .research-grid,
   .about-panel-grid,
   .project-card-grid,
+  .blog-card-grid,
   .academic-mini-grid,
   .academic-links-box {
     grid-template-columns: 1fr;
