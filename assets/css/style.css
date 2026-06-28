@@ -294,10 +294,12 @@ h3 {
 
 .home-profile-photo img {
   width: 100%;
-  height: min(44vw, 390px);
-  object-fit: cover;
+  height: min(62vw, 520px);
+  object-fit: contain;
+  object-position: center;
   border-radius: 8px;
   box-shadow: var(--shadow-soft);
+  background: var(--white);
 }
 
 .field-section {
@@ -306,7 +308,7 @@ h3 {
 
 .field-grid {
   display: grid;
-  grid-template-columns: minmax(0, 0.85fr) minmax(420px, 1.15fr);
+  grid-template-columns: minmax(0, 0.82fr) minmax(420px, 1.18fr);
   gap: 48px;
   align-items: center;
 }
@@ -339,23 +341,43 @@ h3 {
   background: var(--green-700);
 }
 
-.photo-mosaic {
+.field-gallery {
   display: grid;
-  grid-template-columns: 1.05fr 0.95fr;
-  grid-template-rows: 190px 190px;
-  gap: 14px;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(260px, 340px);
+  gap: 16px;
+  overflow-x: auto;
+  overscroll-behavior-inline: contain;
+  padding: 4px 4px 16px;
+  scroll-snap-type: inline mandatory;
+  scrollbar-color: var(--green-700) #edf4ef;
 }
 
-.photo-mosaic img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+.field-gallery figure {
+  scroll-snap-align: start;
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid var(--line);
   border-radius: 8px;
+  background: var(--white);
   box-shadow: var(--shadow-soft);
 }
 
-.photo-mosaic img:first-child {
-  grid-row: span 2;
+.field-gallery img {
+  width: 100%;
+  height: 310px;
+  object-fit: contain;
+  object-position: center;
+  padding: 8px;
+  background: #f7faf8;
+}
+
+.field-gallery figcaption {
+  padding: 12px 14px 14px;
+  color: var(--ink);
+  font-size: 0.86rem;
+  font-weight: 700;
+  border-top: 1px solid var(--line);
 }
 
 .split {
@@ -835,8 +857,8 @@ h3 {
     max-height: 430px;
   }
 
-  .photo-mosaic {
-    grid-template-rows: 170px 170px;
+  .field-gallery {
+    grid-auto-columns: minmax(240px, 320px);
   }
 
   .quick-grid,
@@ -906,13 +928,12 @@ h3 {
     grid-template-columns: 1fr;
   }
 
-  .photo-mosaic {
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(3, 210px);
+  .field-gallery {
+    grid-auto-columns: minmax(230px, 82vw);
   }
 
-  .photo-mosaic img:first-child {
-    grid-row: auto;
+  .field-gallery img {
+    height: 290px;
   }
 
   .collaboration-box {
