@@ -7,8 +7,8 @@
   <meta name="description" content="Site acadêmico de Robson Borges de Lima, professor e pesquisador em Ciências Florestais, Biometria Florestal, Mensuração Florestal, Ecologia Espacial e Programação Científica em R." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="assets/css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css?v=20260628-2" />
 </head>
 
 <body>
@@ -38,92 +38,48 @@
   </header>
 
   <main>
-    <section class="hero hero-home">
-      <div class="container hero-grid">
-        <div class="hero-copy">
-          <p class="eyebrow">Ciências Florestais | Amazônia | Ecologia Espacial</p>
+    <section class="home-profile">
+      <div class="container home-profile-grid">
+        <div class="home-profile-copy">
+          <p class="section-kicker">Ciências Florestais | Amazônia | Ecologia Espacial</p>
           <h1>Robson Borges de Lima</h1>
-          <p class="hero-lead">
-            Professor Adjunto da Universidade do Estado do Amapá (UEAP) e pesquisador em Ciências Florestais, com atuação em biometria florestal, mensuração florestal, ecologia espacial, florestas tropicais, árvores gigantes da Amazônia, modelagem de distribuição de espécies e programação científica em R.
+          <p class="role">Professor Adjunto | UEAP</p>
+          <p class="academic-tags">Biometria Florestal | Mensuração Florestal | Ecologia de Florestas Tropicais | Programação Científica em R</p>
+          <p>
+            Professor e pesquisador em Ciências Florestais, com atuação em inventário florestal, biometria, mensuração, ecologia espacial, modelagem estatística, árvores gigantes da Amazônia, modelagem de distribuição de espécies e programação científica em R.
           </p>
           <div class="hero-actions">
             <a href="sobre.html" class="button button-primary">Conheça meu perfil</a>
-            <a href="projetos.html" class="button button-secondary">Ver projetos</a>
+            <a href="#links-academicos" class="button button-outline-dark">Links acadêmicos</a>
           </div>
         </div>
+
+        <figure class="home-profile-photo">
+          <img src="assets/img/profile/profile.jpg" alt="Robson Borges de Lima em campo na floresta amazônica" />
+        </figure>
       </div>
     </section>
 
-    <section class="section section-white">
-      <div class="container split">
-        <div>
-          <p class="section-kicker">Perfil acadêmico</p>
-          <h2>Pesquisa, ensino e programação científica aplicados às florestas tropicais</h2>
-        </div>
-        <div class="prose">
+    <section class="section field-section">
+      <div class="container field-grid">
+        <div class="field-copy">
+          <p class="section-kicker">Pesquisa em campo</p>
+          <h2>Florestas tropicais, dados ecológicos e programação científica</h2>
           <p>
-            Minha atuação integra inventário florestal, biometria, mensuração, modelagem estatística, ecologia espacial, ecologia de florestas tropicais e ciência de dados para compreender a estrutura, a dinâmica e a conservação de paisagens amazônicas.
+            A pesquisa combina observações de campo, mensuração florestal, modelagem espacial e ferramentas computacionais para investigar padrões de biodiversidade, estrutura florestal e conservação em paisagens amazônicas.
           </p>
-          <p>
-            O sensoriamento remoto aparece como ferramenta complementar nas pesquisas, especialmente em conjunto com dados de campo, programação em R, modelagem espacial e análises voltadas à biodiversidade e ao manejo de florestas naturais.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container">
-        <div class="section-heading">
-          <p class="section-kicker">Acesso rápido</p>
-          <h2>Navegue pelo portal</h2>
+          <div class="feature-list">
+            <span>Árvores gigantes da Amazônia</span>
+            <span>Modelagem de distribuição de espécies</span>
+            <span>Biometria e mensuração florestal</span>
+            <span>Programação científica em R</span>
+          </div>
         </div>
 
-        <div class="quick-grid">
-          <a href="sobre.html" class="quick-card">
-            <span>01</span>
-            <h3>Sobre</h3>
-            <p>Formação, trajetória, áreas de atuação e colaborações científicas.</p>
-          </a>
-          <a href="projetos.html" class="quick-card">
-            <span>02</span>
-            <h3>Projetos</h3>
-            <p>Pesquisas sobre Amazônia, árvores gigantes, biometria florestal e ecologia espacial.</p>
-          </a>
-          <a href="disciplinas.html" class="quick-card">
-            <span>03</span>
-            <h3>Disciplinas</h3>
-            <p>Materiais de ensino, ementas, exercícios e scripts para formação acadêmica.</p>
-          </a>
-          <a href="palestras.html" class="quick-card">
-            <span>04</span>
-            <h3>Palestras</h3>
-            <p>Conferências, minicursos, aulas públicas e apresentações científicas.</p>
-          </a>
-          <a href="shiny.html" class="quick-card">
-            <span>05</span>
-            <h3>Shiny</h3>
-            <p>Aplicativos interativos para ensino, análise florestal e modelagem ecológica.</p>
-          </a>
-          <a href="publicacoes.html" class="quick-card">
-            <span>06</span>
-            <h3>Publicações</h3>
-            <p>Artigos, capítulos, preprints, relatórios e produção técnica.</p>
-          </a>
-          <a href="orientacoes.html" class="quick-card">
-            <span>07</span>
-            <h3>Orientações</h3>
-            <p>Projetos de IC, TCC, pós-graduação, coorientações e formação de estudantes.</p>
-          </a>
-          <a href="financiamento.html" class="quick-card">
-            <span>08</span>
-            <h3>Financiamento</h3>
-            <p>Editais, bolsas, agências de fomento e apoio institucional à pesquisa.</p>
-          </a>
-          <a href="cv.html" class="quick-card">
-            <span>09</span>
-            <h3>CV</h3>
-            <p>Currículo resumido, formação, produção acadêmica e links profissionais.</p>
-          </a>
+        <div class="photo-mosaic" aria-label="Imagens de atividades de pesquisa em campo">
+          <img src="assets/img/fieldwork/campo-tumucumaque.jpg" alt="Floresta amazônica em área de pesquisa" />
+          <img src="assets/img/fieldwork/dados-dendrometros.jpg" alt="Coleta de dados dendrométricos em campo" />
+          <img src="assets/img/gallery/voando%20drone.jpg" alt="Atividade de campo com drone" />
         </div>
       </div>
     </section>
@@ -156,7 +112,7 @@
       </div>
     </section>
 
-    <section class="section collaboration-section">
+    <section class="section collaboration-section" id="links-academicos">
       <div class="container collaboration-box">
         <div class="collaboration-copy">
           <p class="section-kicker">Contato acadêmico</p>
@@ -168,27 +124,31 @@
 
         <div class="academic-mini-grid" aria-label="Links acadêmicos">
           <a href="cv.html" class="academic-mini-card">
-            <span class="mini-icon">CV</span>
+            <span class="brand-icon cv-icon">CV</span>
             <strong>Currículo</strong>
           </a>
           <a href="https://lattes.cnpq.br/4180291284433803" class="academic-mini-card" target="_blank" rel="noopener noreferrer">
-            <span class="mini-icon lattes">L</span>
+            <span class="brand-icon lattes-icon">L</span>
             <strong>Lattes</strong>
           </a>
           <a href="https://orcid.org/0000-0001-5915-4045" class="academic-mini-card" target="_blank" rel="noopener noreferrer">
-            <span class="mini-icon orcid">iD</span>
+            <span class="brand-icon orcid-icon">iD</span>
             <strong>ORCID</strong>
           </a>
           <a href="https://scholar.google.com/citations?user=GU71WLUAAAAJ&amp;hl=pt-BR" class="academic-mini-card" target="_blank" rel="noopener noreferrer">
-            <span class="mini-icon scholar">GS</span>
+            <span class="brand-icon scholar-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M12 3 2 9l10 6 10-6-10-6Zm-6 9.2V16c0 2 3.6 4 6 4s6-2 6-4v-3.8l-6 3.6-6-3.6Z" /></svg>
+            </span>
             <strong>Google Scholar</strong>
           </a>
           <a href="https://github.com/robson-lima2023" class="academic-mini-card" target="_blank" rel="noopener noreferrer">
-            <span class="mini-icon github">GH</span>
+            <span class="brand-icon github-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-3.2 19.5c.5.1.7-.2.7-.5v-1.8c-2.9.6-3.5-1.2-3.5-1.2-.5-1.1-1.1-1.4-1.1-1.4-.9-.6.1-.6.1-.6 1 .1 1.6 1.1 1.6 1.1.9 1.6 2.4 1.1 3 .9.1-.7.4-1.1.7-1.4-2.3-.3-4.7-1.2-4.7-5A3.9 3.9 0 0 1 6.6 8.9c-.1-.3-.5-1.3.1-2.7 0 0 .9-.3 2.8 1a9.5 9.5 0 0 1 5 0c1.9-1.3 2.8-1 2.8-1 .6 1.4.2 2.4.1 2.7a3.9 3.9 0 0 1 1.1 2.7c0 3.9-2.4 4.7-4.7 5 .4.3.8 1 .8 2V21c0 .3.2.6.8.5A10 10 0 0 0 12 2Z" /></svg>
+            </span>
             <strong>GitHub</strong>
           </a>
           <a href="https://www.researchgate.net/profile/Robson_Lima4" class="academic-mini-card" target="_blank" rel="noopener noreferrer">
-            <span class="mini-icon rg">RG</span>
+            <span class="brand-icon rg-icon">RG</span>
             <strong>ResearchGate</strong>
           </a>
         </div>

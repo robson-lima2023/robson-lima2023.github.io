@@ -23,10 +23,10 @@ html {
 
 body {
   margin: 0;
-  font-family: "Inter", "Segoe UI", Arial, sans-serif;
+  font-family: "Poppins", "Segoe UI", Arial, sans-serif;
   color: var(--ink);
   background: var(--green-50);
-  line-height: 1.7;
+  line-height: 1.65;
   text-rendering: optimizeLegibility;
 }
 
@@ -61,11 +61,11 @@ h3 {
 }
 
 h1 {
-  font-size: clamp(2.45rem, 6vw, 4.75rem);
+  font-size: clamp(2.2rem, 4.4vw, 3.45rem);
 }
 
 h2 {
-  font-size: clamp(1.75rem, 3.5vw, 2.7rem);
+  font-size: clamp(1.55rem, 3vw, 2.2rem);
   margin-bottom: 1rem;
 }
 
@@ -79,7 +79,7 @@ h3 {
 }
 
 .section {
-  padding: 86px 0;
+  padding: 74px 0;
 }
 
 .section-white {
@@ -89,7 +89,7 @@ h3 {
 .section-kicker,
 .eyebrow {
   color: var(--green-700);
-  font-size: 0.78rem;
+  font-size: 0.76rem;
   font-weight: 800;
   letter-spacing: 0.08em;
   margin-bottom: 1rem;
@@ -112,7 +112,7 @@ h3 {
 
 .navbar {
   width: min(calc(100% - 40px), var(--max-width));
-  height: 72px;
+  height: 68px;
   margin-inline: auto;
   display: flex;
   align-items: center;
@@ -140,7 +140,7 @@ h3 {
   position: relative;
   display: inline-flex;
   align-items: center;
-  min-height: 72px;
+  min-height: 68px;
   color: rgba(255, 255, 255, 0.88);
   font-size: 0.95rem;
   font-weight: 600;
@@ -151,7 +151,7 @@ h3 {
   position: absolute;
   left: 0;
   right: 0;
-  bottom: 15px;
+  bottom: 13px;
   height: 2px;
   background: #57d68d;
   transform: scaleX(0);
@@ -251,9 +251,111 @@ h3 {
   background: #a9f0c2;
 }
 
+.button-outline-dark {
+  color: var(--green-800);
+  border: 1px solid rgba(8, 122, 83, 0.34);
+  background: var(--white);
+}
+
 .button-secondary {
   color: var(--white);
   border: 1px solid rgba(255, 255, 255, 0.72);
+}
+
+.home-profile {
+  padding: 138px 0 70px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.97), rgba(247, 250, 248, 0.98)),
+    url("../img/hero/hero-amazon.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+.home-profile-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.08fr) minmax(320px, 0.74fr);
+  gap: 86px;
+  align-items: center;
+}
+
+.home-profile-copy h1 {
+  margin-bottom: 0.78rem;
+  color: var(--ink);
+  font-size: clamp(2.25rem, 4.5vw, 3.55rem);
+}
+
+.home-profile-copy p:last-of-type {
+  max-width: 770px;
+}
+
+.home-profile-photo {
+  margin: 0;
+}
+
+.home-profile-photo img {
+  width: 100%;
+  height: min(44vw, 390px);
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: var(--shadow-soft);
+}
+
+.field-section {
+  background: var(--white);
+}
+
+.field-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.85fr) minmax(420px, 1.15fr);
+  gap: 48px;
+  align-items: center;
+}
+
+.field-copy p {
+  max-width: 620px;
+}
+
+.feature-list {
+  display: grid;
+  gap: 10px;
+  margin-top: 24px;
+}
+
+.feature-list span {
+  position: relative;
+  padding-left: 20px;
+  color: var(--ink);
+  font-size: 0.94rem;
+}
+
+.feature-list span::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.68em;
+  width: 7px;
+  height: 7px;
+  border-radius: 999px;
+  background: var(--green-700);
+}
+
+.photo-mosaic {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  grid-template-rows: 190px 190px;
+  gap: 14px;
+}
+
+.photo-mosaic img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: var(--shadow-soft);
+}
+
+.photo-mosaic img:first-child {
+  grid-row: span 2;
 }
 
 .split {
@@ -365,7 +467,8 @@ h3 {
 }
 
 .mini-icon,
-.academic-mark {
+.academic-mark,
+.brand-icon {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -374,11 +477,19 @@ h3 {
   font-weight: 800;
 }
 
-.mini-icon {
-  width: 38px;
-  height: 38px;
+.mini-icon,
+.brand-icon {
+  width: 46px;
+  height: 46px;
   background: var(--green-700);
-  font-size: 0.74rem;
+  font-size: 0.78rem;
+  line-height: 1;
+}
+
+.brand-icon svg {
+  width: 27px;
+  height: 27px;
+  fill: currentColor;
 }
 
 .about-hero {
@@ -580,7 +691,8 @@ h3 {
   border-right: 0;
 }
 
-.academic-mark {
+.academic-mark,
+.academic-link-card .brand-icon {
   width: 46px;
   height: 46px;
   margin-bottom: 10px;
@@ -601,24 +713,34 @@ h3 {
   overflow-wrap: anywhere;
 }
 
-.lattes {
+.lattes,
+.lattes-icon {
   background: #24458f;
 }
 
-.orcid {
+.orcid,
+.orcid-icon {
   background: #a6ce39;
+  color: #ffffff;
 }
 
-.scholar {
+.scholar,
+.scholar-icon {
   background: #4285f4;
 }
 
-.github {
+.github,
+.github-icon {
   background: #111827;
 }
 
-.rg {
+.rg,
+.rg-icon {
   background: #00b7a8;
+}
+
+.cv-icon {
+  background: var(--green-700);
 }
 
 .site-footer {
@@ -697,9 +819,24 @@ h3 {
   .hero-grid,
   .split,
   .about-hero-grid,
+  .home-profile-grid,
+  .field-grid,
   .collaboration-box {
     grid-template-columns: 1fr;
     gap: 34px;
+  }
+
+  .home-profile {
+    padding-top: 116px;
+  }
+
+  .home-profile-photo img {
+    height: auto;
+    max-height: 430px;
+  }
+
+  .photo-mosaic {
+    grid-template-rows: 170px 170px;
   }
 
   .quick-grid,
@@ -735,6 +872,10 @@ h3 {
     padding: 58px 0;
   }
 
+  .home-profile {
+    padding: 106px 0 54px;
+  }
+
   .about-hero {
     padding: 118px 0 58px;
   }
@@ -759,6 +900,19 @@ h3 {
   .academic-mini-grid,
   .academic-links-box {
     grid-template-columns: 1fr;
+  }
+
+  .field-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .photo-mosaic {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 210px);
+  }
+
+  .photo-mosaic img:first-child {
+    grid-row: auto;
   }
 
   .collaboration-box {
